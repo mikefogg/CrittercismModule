@@ -87,30 +87,47 @@ public class CrittercismModuleModule extends KrollModule
 
     // Methods
 	@Kroll.method
-	public void startWithAppID(String app_id)
+	public void start(KrollDict dict)
 	{
+        String app_id = (String)dict.get("appID");
+        Boolean should_collect_logcat = (Boolean)dict.get("setLogcatReportingEnabled");
+        String custom_app_version = (String)dict.get("customAppVersion");
+        
 		Activity activity = TiApplication.getAppCurrentActivity();
         
-		try{
-            
-			CrittercismConfig config = new CrittercismConfig();
-            
-            try {
+        if(app_id != null){
+            // We have an app id, now we can do this
+
+            try{
+                
+                CrittercismConfig config = new CrittercismConfig();
+                    
                 // Set the version name
-                config.setCustomVersionName(activity.getPackageManager().getPackageInfo(activity.getPackageName(), 0).versionName);
-                config.setVersionCodeToBeIncludedInVersionString(true);
-            } catch (Exception e) {
-                // Well... that didn't work...
+                if(custom_app_version != null){
+                    config.setCustomVersionName(custom_app_version);
+                    config.setVersionCodeToBeIncludedInVersionString(false);
+                } else {
+                    config.setCustomVersionName(activity.getPackageManager().getPackageInfo(activity.getPackageName(), 0).versionName);
+                    config.setVersionCodeToBeIncludedInVersionString(true);
+                }
+            
+                // Send logcat info
+                if(should_collect_logcat !=null && should_collect_logcat){
+                    config.setLogcatReportingEnabled(should_collect_logcat);
+                }
+                
+                // Initialize.
+                Crittercism.initialize(activity.getApplicationContext(), app_id, config);
+                
+                handleLastCrash();
+            } catch(Exception e) {
+                // Well... we couldn't start...
+                // Log.e(LCAT, "Can't inialize because of: "+e);
             };
-            
-			// Initialize.
-			Crittercism.initialize(activity.getApplicationContext(),
-                                   app_id, config);
-            
-            handleLastCrash();
-        } catch(Exception e) {
-            // Well... we couldn't start...
-        };
+        } else {
+            // There's no app id... we can't start it
+            // Log.e(LCAT, "Crittercism cannot be initialized without an app id!");
+        }
 	}
     
     // Force a crash
