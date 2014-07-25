@@ -54,7 +54,9 @@ public class CrittercismModuleModule extends KrollModule
             @Override public void onCritterDataReceived(CritterUserData userData) {
                 boolean crashedOnLastLoad = userData.crashedOnLastLoad();
                 
-                // TODO :: Maybe do something with crashedOnLastLoad?
+                if(crashedOnLastLoad){
+                    Log.e(LCAT, "App crashed the last time it was loaded!");
+                };
 
             };
         };
@@ -135,7 +137,7 @@ public class CrittercismModuleModule extends KrollModule
 	public void crash(String reason)
 	{
         if(reason == null){
-            reason = "Forcing crashlytics crash!";
+            reason = "Crashing your app! Take that!";
         };
         
         throw new RuntimeException(reason);

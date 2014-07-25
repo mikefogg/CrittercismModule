@@ -1,0 +1,17 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 1.0.0
+apiversion: 2
+description: CrittercismModule
+author: Mike Fogg
+license: Specify your license
+copyright: Copyright (c) 2014 by Your Company
+
+# these should not be edited
+name: CrittercismModule
+moduleid: crittercism
+guid: 1d150bda-33b2-4489-84f1-4630affc1b05
+platform: iphone
+minsdk: 3.0.0
