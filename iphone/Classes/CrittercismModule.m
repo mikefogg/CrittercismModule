@@ -105,14 +105,14 @@
     
     NSLog(@"[CrittercismModule] Starting Crittercism!");
     
-//    @try {
+    @try {
         NSString *app_id;
         ENSURE_ARG_OR_NIL_FOR_KEY(app_id, args, @"appID", NSString);
 
         [Crittercism enableWithAppID:app_id andDelegate:self];
-//    } @catch (NSException *exception) {
-//        NSLog(@"[CrittercismModule] Failed to start.");
-//    }
+    } @catch (NSException *exception) {
+        NSLog(@"[CrittercismModule] Failed to start.");
+    }
 }
 
 //
@@ -126,8 +126,6 @@
     if(!reason){
         reason = @"[CrittercismModule] Crashing your app! Take that!";
     };
-    
-    NSLog(@"[INFO] Trying to crash app with reason: %@", reason);
     
     assert(! reason);
 }
@@ -156,8 +154,6 @@
 -(void)leaveBreadcrumb:(NSString *)crumb
 {
     @try {
-        if([crumb length] > 140){ return; };
-        
         [Crittercism leaveBreadcrumb:crumb];
     } @catch (NSException *exception) {
         // Well... that didn't work...

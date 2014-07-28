@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B0E68184-59E9-407E-8711-115DB4A2C9E6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CrittercismModule</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8A17A65C-2694-4124-86CF-B3672EF56134</key>
+		<string>ssh://github.com/mikefogg/CrittercismModule.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iphone/CrittercismModule.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8A17A65C-2694-4124-86CF-B3672EF56134</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/mikefogg/CrittercismModule.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8A17A65C-2694-4124-86CF-B3672EF56134</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8A17A65C-2694-4124-86CF-B3672EF56134</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CrittercismModule</string>
+		</dict>
+	</array>
+</dict>
+</plist>
