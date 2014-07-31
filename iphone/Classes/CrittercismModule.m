@@ -123,6 +123,8 @@
 
 -(void)crash:(NSString *)reason
 {    
+    ENSURE_SINGLE_ARG(reason, NSString);
+
     if(!reason){
         reason = @"[CrittercismModule] Crashing your app! Take that!";
     };
@@ -138,6 +140,8 @@
 
 -(void)setUsername:(NSString *)name
 {
+    ENSURE_SINGLE_ARG(name, NSString);
+
     @try {
         [Crittercism setUsername:name];
     } @catch (NSException *exception) {
@@ -153,6 +157,8 @@
 
 -(void)leaveBreadcrumb:(NSString *)crumb
 {
+    ENSURE_SINGLE_ARG(crumb, NSString);
+
     @try {
         [Crittercism leaveBreadcrumb:crumb];
     } @catch (NSException *exception) {

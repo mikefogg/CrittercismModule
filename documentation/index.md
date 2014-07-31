@@ -176,8 +176,6 @@ Starting up the Crittercism SDK
 <h2>Known Issues and Future Improvements</h2>
 
 1. Allow something to happen if your last load was a crash (a callback on load the next time)
-2. Having an issue sending breadcrumbs on iOS.
-  - Receiving a "[__NSArrayM length]: unrecognized selector sent to instance" error when adding one.
 
 <h2>Please let me know if you'd like any additions or something isn't working!</h2>
 
