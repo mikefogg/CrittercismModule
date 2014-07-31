@@ -41,7 +41,7 @@ crittercism
 <h2>Usage</h2>
 
 <pre><code>
-var Crittercism = require('crittercism'); // Initialize the SquareCamera module
+var Crittercism = require('crittercism'); // Initialize the Crittercism module
 
 //
 // *** Start it up! *** 
@@ -68,7 +68,7 @@ Crittercism.setUsername("test_user");
 
 //
 // *** Set some metadata on the user *** 
-// NOTE: This can be set at any time and setting it again will override the last username
+// NOTE: This can be set at any time and setting it again will override the previous value
 //
 
 Crittercism.setMetaData({

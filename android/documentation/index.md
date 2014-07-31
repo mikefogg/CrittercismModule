@@ -41,7 +41,7 @@ crittercism
 <h2>Usage</h2>
 
 <pre><code>
-var Crittercism = require('crittercism'); // Initialize the SquareCamera module
+var Crittercism = require('crittercism'); // Initialize the Crittercism module
 
 //
 // *** Start it up! *** 
